@@ -88,7 +88,7 @@ print("\nClassification Report:\n")
 print(classification_report(y_test, y_pred))
 
 # =====================================================
-# 8. CONFUSION MATRIX (IMPORTANT)
+# 8. CONFUSION MATRIX 
 # =====================================================
 cm = confusion_matrix(y_test, y_pred)
 
@@ -107,7 +107,7 @@ plt.show()
 print("✅ Confusion Matrix saved")
 
 # =====================================================
-# 9. FEATURE IMPORTANCE (VERY IMPORTANT FOR HR)
+# 9. FEATURE IMPORTANCE 
 # =====================================================
 feat_imp = pd.DataFrame({
     "Feature": feature_cols,
@@ -125,7 +125,7 @@ print("\nTop Features:\n")
 print(feat_imp.head(10))
 
 # =====================================================
-# 10. SAVE MODEL ARTIFACTS (FOR FLASK)
+# 10. SAVE MODEL ARTIFACTS 
 # =====================================================
 joblib.dump(model, "promotion_model.pkl")
 joblib.dump(scaler, "scaler.pkl")
